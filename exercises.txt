@@ -1,0 +1,50 @@
+Exercise 1
+$ mysql-ctl start
+$ mysql -u aliyahmaliyah
+
+Exercise 2
+mysql> create database decodemtl_test;
+mysql> create database decodemtl_addressbook;
+
+Exercise 3
+mysql> drop database decodemtl_test;
+
+Exercise 4
+mysql> show databases;
+
+Exercise 5
+mysql> create table `account` (`column 1`int);
+mysql> create table `AddressBook` (`column 1`int);
+mysql> create table `Entry` (`column 1`int);
+mysql> create table `Test` (`column 1`int);
+
+Exercise 6
+mysql> drop table `Test`;
+
+Exercise 7
+mysql> show tables in decodemtl_addressbook;
+
+Exercise 8
+mysql> alter table `account` add (`ID` int auto_increment primary key);
+mysql> alter table `account` add (`email` varchar (255));
+mysql> alter table `account` add (`password` varchar (40), `createdOn` datetime, `modifiedOn`datetime);
+
+mysql> alter table `AddressBook` add (`ID` int auto_increment primary key, `accountID` int, `name` varchar (255), `createdOn` datetime, `modifiedOn`datetime);
+
+mysql> alter table `Entry` add (`ID` int auto_increment primary key, `AddressBookID` int, `firstName` varchar (255), `lastName` varchar (255), `birthday` datetime, `type` enum('home', 'work', 'other'), `subtype` enum('phone', 'address', 'email'), `contentLineOne` varchar (255), `contentLineTwo` varchar (255), `contentLineThree` varchar (255), `contentLineFour` varchar (255), `contentLineFive1` varchar (255));
+
+Exercise 9
+mysql> create database Barn_with_Chickens;
+mysql> use Barn_with_Chickens;
+mysql> create table `Chicken_Count`(`Date of Count` datetime, `Num of Roosters` int, `Num of Hens` int, `Num of Chicks` int);
+mysql> create table `Chick_bday`(`ID` int auto_increment primary key, `birthday` datetime);
+
+
+Exercise 10
+mysql> create database `hotel`;
+mysql> use `hotel`;
+mysql> create table `Room_details`(`Date` datetime, `Room Number` int, `Available` boolean, `Has 3+ Occupancy` boolean, `Rentable Room` boolean, `Has Private Kitchen` boolean);
+
+mysql> create table `Floor_details`(`Floors Count` int, `Windows Count` int);
+
+mysql> create table `Carpet`(`Floor Num` int, `Floor has carpet` boolean);
